@@ -9,10 +9,9 @@ export default async function Home() {
     <main className={styles.main}>
       <ul>
         {data.results.map((pokemon) => (
-          <li key={pokemon.name}>{pokemon.name}</li>
+          <li key={pokemon.name}><a href={pokemon.name}>{pokemon.name}</a></li>
         ))}
       </ul>
-      
     </main>
   )
 }
