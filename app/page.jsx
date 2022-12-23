@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default async function Home() {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon')
   const data = await res.json()
@@ -10,7 +12,7 @@ export default async function Home() {
 		}}>
       <ul>
         {data.results.map((pokemon) => (
-          <li key={pokemon.name}><a href={pokemon.name}>{pokemon.name}</a></li>
+          <li key={pokemon.name}><Link href={pokemon.name}>{pokemon.name}</Link></li>
         ))}
       </ul>
     </main>
