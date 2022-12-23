@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 // takes in the name property from the folder [name] and displays it on the page
@@ -24,6 +25,7 @@ export default async function Name({ params }) {
 		<main>
 			<h1>{pokemon.name}</h1>
 			<p>Base Experience: {pokemon.base_experience}</p>
+			<Image src={pokemon.sprites.front_default} alt={pokemon.name} width={96} height={96} />
 		</main>
 	)
 }

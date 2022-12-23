@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import './globals.css'
 
 export default function RootLayout({ children }) {
@@ -8,7 +10,9 @@ export default function RootLayout({ children }) {
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>{children}
+        <footer style={{ textAlign: 'center' }}><Link href="https://github.com/JackHowa">Made by jackhowa <Image width={25} height={25} alt="" src="https://avatars.githubusercontent.com/u/5950956?v=4" /></Link></footer>
+      </body>
     </html>
   )
 }
