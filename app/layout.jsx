@@ -11,9 +11,6 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
-        <nav style={{padding: '1rem'}}>
-          <Link href="/">Home</Link>
-        </nav>
         {children}
         <footer style={{ textAlign: 'center' }}><Link href="https://github.com/JackHowa">Made by jackhowa <Image width={25} height={25} alt="" src="https://avatars.githubusercontent.com/u/5950956?v=4" /></Link></footer>
       </body>
